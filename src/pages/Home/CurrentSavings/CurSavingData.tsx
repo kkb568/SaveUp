@@ -6,7 +6,8 @@ import { hrStyle, linkStyle } from "../../../emotionjs-styles/styles";
 interface Props {
     id: number,
     name: string,
-    current_amount: number
+    current_amount: number,
+    target_amount: number
 }
 
 export default function CurSavingData(props: Props) {
@@ -14,7 +15,8 @@ export default function CurSavingData(props: Props) {
         <div className={css`
             margin-left: 2em;
         `}>
-            <p>{props.id}. {props.name}, Current amount: Ksh. {props.current_amount}</p>
+            <p>{props.id}. {props.name}, Current amount: Ksh. {props.current_amount},
+            Amount left: {props.target_amount - props.current_amount}</p>
             <Button>
                 <Link to={props.name} className={linkStyle}>View savings details</Link>
             </Button>

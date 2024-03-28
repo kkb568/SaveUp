@@ -12,7 +12,8 @@ export default function CurSavings() {
             <CurSavingData key={saving.id}
             id={saving.id}
             name={saving.name}
-            current_amount={saving.current_amount}/>
+            current_amount={saving.current_amount}
+            target_amount={saving.target_amount}/>
         )
     })
 
