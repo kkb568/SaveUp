@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import CreateSavings from "./pages/CreateSavings/CreateSavings";
 import SavingsDetails from "./pages/SavingDetails/SavingsDetails";
 import SavingsPayment from "./pages/SavingsPayment/SavingsPayment";
+import Error_404 from "./pages/Error/Error_404";
 
 /* Specified the green color value as a context 
   since it would be used throughout the application.
@@ -26,6 +27,7 @@ function App() {
             <Route path="create_savings" element={<CreateSavings/>}/>
             <Route path=":savingsName" element={<SavingsDetails/>}/>
             <Route path=":savingsName/addSavings" element={<SavingsPayment/>} />
+            <Route path="*" element={<Error_404/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
