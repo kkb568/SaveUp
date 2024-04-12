@@ -16,6 +16,7 @@ export const ShortContainer = styled.div`
     margin-bottom: 5em;
     box-shadow:  0px 0px 7px 3px rgba(0, 0, 0, 0.15);;
     margin-left: 10%;
+    border-radius: .5em;
 `
 
 export const Button = styled.button`

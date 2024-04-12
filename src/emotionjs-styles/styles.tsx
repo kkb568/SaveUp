@@ -39,3 +39,7 @@ export const selectStyle = {
     width: "80%",
     cursor: "pointer",
 }
+
+export const labelStyle = css`
+    line-height: 1.5;
+`

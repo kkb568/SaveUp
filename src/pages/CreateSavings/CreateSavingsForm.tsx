@@ -1,6 +1,6 @@
 import { css } from "@emotion/css";
 import { Button } from "../../emotionjs-styles/styled-components";
-import { inputStyle, selectStyle } from "../../emotionjs-styles/styles";
+import { inputStyle, labelStyle, selectStyle } from "../../emotionjs-styles/styles";
 import { useState } from "react";
 import { getLocalStorageItem, updateLocalStorageItem } from "../../data";
 import { useNavigate } from "react-router-dom";
@@ -62,15 +62,15 @@ export default function CreateSavingsForm() {
 
     return (
         <form className={formStyle} onSubmit={addSavingGoal}>
-            <label htmlFor="name">Name:</label>
+            <label className={labelStyle} htmlFor="name">Name:</label>
             <br/>
             <input onChange={e => addFormData(e)} style={inputStyle} type="text" className="name" id="name" placeholder="Name" required/>
             <br/><br/>
-            <label htmlFor="target_amount">Target amount:</label>
+            <label className={labelStyle} htmlFor="target_amount">Target amount:</label>
             <br/>
             <input onChange={e => addFormData(e)} style={inputStyle} type="number" className="target_amount" id="target_amount" placeholder="Target amount (in Ksh.)" required/>
             <br/><br/>
-            <label htmlFor="frequency">Savings frequency</label>
+            <label className={labelStyle} htmlFor="frequency">Savings frequency:</label>
             <br/>
             <select onChange={e => addFormData(e)} id="frequency" className="frequency" style={selectStyle} required>
                 <option value="">-- Select frequency --</option>

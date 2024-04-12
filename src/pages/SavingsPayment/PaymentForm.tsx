@@ -1,6 +1,6 @@
 import { css } from "@emotion/css";
 import { Button } from "../../emotionjs-styles/styled-components";
-import { inputStyle } from "../../emotionjs-styles/styles";
+import { inputStyle, labelStyle } from "../../emotionjs-styles/styles";
 import { useState } from "react";
 import { CurrentSavingsType, PreviousSavingsType, getLocalStorageItem, updateLocalStorageItem } from "../../data";
 import { useNavigate, useParams } from "react-router-dom";
@@ -50,7 +50,7 @@ export default function PaymentForm() {
 
     return (
         <form className={formStyle} onSubmit={addAmount}>
-            <label htmlFor="amount">Amount to add:</label>
+            <label className={labelStyle} htmlFor="amount">Amount to add:</label>
             <br/>
             <input 
                 style={inputStyle} 
