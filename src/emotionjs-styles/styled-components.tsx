@@ -30,9 +30,6 @@ export const Button = styled.button`
     transition: .3s ease;
     
     &:hover {
-        background-color: ${green};
-    }
-    &:disabled {
-        background-color: #016501;
+        background-color: '#016501';
     }
 `
